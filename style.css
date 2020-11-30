@@ -1,0 +1,43 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: #040a24;
+    overflow: hidden;
+}
+.container{
+	width: 460px;
+	display: flex;
+	justify-content: space-between;
+	margin: 70px 270px;
+}
+#color{
+	width: 120px;
+	stroke: #fff;
+	fill-opacity: 0;
+	animation: fill .5s ease-in-out forwards 2.8s;
+}
+#color path{
+    stroke-dasharray: 84.94;
+    stroke-dashoffset: 84.94;
+    animation: animate 3s ease forwards;
+}
+@keyframes animate{
+    to{
+        stroke-dashoffset: 0;
+    }
+}
+@keyframes fill{
+    from{
+        fill-opacity: 0;
+        transform: scale(0.9);
+    }
+    to{
+    	stroke: #000;
+        fill-opacity: 1;
+        transform: scale(1);
+        filter: drop-shadow(0 1px 8px #1cdaf4);
+    }
+}
